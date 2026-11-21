@@ -1,5 +1,4 @@
 # Password-Cracking
-Notes, commands, and lab exercises covering password cracking techniques and security testing.
 
 ## Installing John the Ripper GUI (Johnny) on Windows
 
@@ -23,3 +22,19 @@ Notes, commands, and lab exercises covering password cracking techniques and sec
 2. Open Johnny's **Settings / Preferences** menu.
 3. Set the **John executable path** to `john.exe` inside your extracted John `run` folder (for example, `C:\Tools\john\run\john.exe`).
 4. Load your hash file (such as a `$pdf$...` hash), choose your attack mode and wordlist, and start the session.
+
+## Using Online HashCrack (`onlinehashcrack.com`)
+
+**Online HashCrack** provides web-based tools—including an encrypted PDF hash extractor—that output hash formats compatible with **John the Ripper** (`pdf2john` format) and **Hashcat** (`pdf2hashcat` format).
+
+### Step 1: Open the PDF Hash Extractor
+
+1. Go to [Online HashCrack](https://www.onlinehashcrack.com/) or open the [Online HashCrack PDF Hash Extractor](https://www.onlinehashcrack.com/tools-pdf-hash-extractor.php) directly.
+2. Review the tool instructions and upload limits before selecting a file.
+
+### Step 2: Upload the PDF and Extract the Hash
+
+1. Click **Choose file** and select your encrypted PDF file.
+2. Wait for the extraction process to complete (source files are processed for extraction and deleted afterward).
+3. Copy the extracted hash string from the **Extracted hash or conversion output** box (typically starting with `$pdf$...`).
+
